@@ -1,0 +1,24 @@
+<%- include('partials/page-start') %>
+<section class="editor-shell">
+  <div class="editor-header">
+    <div>
+      <p class="eyebrow">Edit</p>
+      <h2>Post <%= post.id %></h2>
+      <p class="muted">Only you can see this entry.</p>
+    </div>
+    <a class="button ghost" href="/dashboard">Back to posts</a>
+  </div>
+
+  <div class="editor-panel">
+    <div id="editor" class="editor" data-post-id="<%= post.id %>" contenteditable="true"><%- draftContent %></div>
+  </div>
+
+  <div class="editor-actions">
+    <button id="saveButton" class="button primary" type="button">Save</button>
+    <a class="button ghost" href="/post/<%= post.id %>">View post</a>
+  </div>
+</section>
+
+<script src="/static/dompurify/purify.min.js"></script>
+<script src="/static/editor.js"></script>
+<%- include('partials/page-end') %>

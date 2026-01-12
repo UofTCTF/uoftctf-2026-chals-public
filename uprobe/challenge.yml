@@ -1,0 +1,34 @@
+name: "uprobe"
+author: "White"
+category: Pwn
+description: |-
+  uprobes are cool
+
+  Note: You can log in as the ctf user
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{upr0b3_migh7_n07_b3_s4f3}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/uprobe.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

@@ -1,0 +1,34 @@
+name: "Gambler's Fallacy"
+author: "yoshixi"
+category: Crypto
+description: |-
+  can we win a zillion dollars tonight?
+
+  algorithms inspired by primedice
+
+  `nc {{ IP }} 5000`
+
+  Author: yoshixi
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: tcp
+host: null
+
+flags:
+- content: uoftctf{ez_m3rs3nne_untwisting!!}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/gamblers-fallacy.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

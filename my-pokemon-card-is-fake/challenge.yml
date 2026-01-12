@@ -1,0 +1,50 @@
+name: "My Pokemon Card is Fake!"
+author: "levu12"
+category: Forensics
+description: |-
+  Han Shangyan noticed that recently, Tong Nian has been getting into Pokemon cards. So, what could be a better 
+  present than a literal prototype for the original Charizard? Not only that, it has been authenticated and 
+  graded a PRISTINE GEM MINT 10 by CGC!!!
+
+  Han Shangyan was able to talk the seller down to a modest 6-7 figure sum (not kidding btw), but when he got 
+  home, he had an uneasy feeling for some reason. Can you help him uncover the secrets that lie behind these cards?                                                                                                                          
+
+  What you will need to find:
+
+  1. Date and time (relative to the printer, and 24-hour clock) that it was printed.
+
+  2. Printer's serial number.
+
+  The flag format will be uoftctf{YYYY_MM_DD_HH:MM_SERIALNUM}
+
+  Example: uoftctf{9999_09_09_23:59_676767676}
+  
+  Notes: 
+  
+  1. You're free to dig more into the whole situation after you've solved the challenge, it's very interesting, though so much hasn't been or can't be said :(
+
+  2. Two days after I write this challenge, I'm going to meet the person whose name was used for all this again. Hopefully I'll be back to respond to tickets!!!
+
+  Author: levu12
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{2024_08_06_21:49_704641508}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/Zard.jpg
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

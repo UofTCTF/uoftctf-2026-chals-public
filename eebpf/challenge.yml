@@ -1,0 +1,34 @@
+name: "extended-eBPF"
+author: "White"
+category: Pwn
+description: |-
+  I extended the eBPF because its cool.
+
+  Note: You can log in as the ctf user
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{n0n_c0ns74n7_shif7_is_700_big_0f_4n_3x73nsi0n}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/eebpf.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

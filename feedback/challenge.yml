@@ -1,0 +1,31 @@
+name: "Feedback"
+author: "none"
+category: Misc
+description: |
+  Give us your feedback about the competition [here](https://forms.gle/SZk8kzbJQXa5RjQn9)!
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+
+protocol: tcp
+
+host: null
+
+flags:
+  - {
+      type: "static",
+      content: "uoftctf{th4nk_y0u_f0r_pl4y1n6_uoftctf_2026!!!}",
+      data: "case_sensitive",
+    }
+
+state: hidden
+
+requirements:
+    - "Sanity Check"
+
+version: "0.1"

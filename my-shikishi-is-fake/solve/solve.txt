@@ -1,0 +1,23 @@
+Step 1: You can pretty much dork some part of 鑑定書付全額返金保証 along with japanese for autograph and shikishi and listings from this seller will appear easily:
+
+https://auctions.yahoo.co.jp/seller/9iaDrYahmV9PSEnk2NEd5mct5MuFo
+
+Step 2: Now, the certificate is censored so you need to find listings where it isn't censored. Multiple platforms i hope is enough hint to somewhere like mercari japan and since you know the style of the fakes (full-color), even just searching for autographed shikishi with certificate will show the listings:
+
+https://jp.mercari.com/search?keyword=証明書付き%20サイン色紙%20&sort=price&order=desc
+
+Name is on certificate.
+
+Step 3: Look up the company name and appraiser. Their website should show up with their email.
+
+Step 4: Now i hope year that they were reborn and started to expand points to a historical search. Go to wayback machine and it will be there.
+
+Step 5: The characters are from Tokyo Revengers. for part 4 i wanted to make it not able to be done before the other parts, but unfortunately it can be cheesed by just searching up ken wakui shikishi on instagram (the clue foreigner bought and posted was to make it easier and stop people from blindly searching on japanese websites in japanese) 
+
+There isn't a way to make people solve the first three parts and get part 4 by reverse image searching because google images is stupid this time and doesn't find it for some reason on instagram even though it's literally almost the same
+
+i guess it does make it so that you can identify that it's the correct one once you have the first part, so i guess the fourth and first parts are interchangeable
+
+https://www.instagram.com/p/CtmjjbDvUkW/
+
+Notes: I could have added another step, which was to OSINT the authenticator and figure out why he was removed from PSA (which is why their Pokemon autograph authentication sucks now, he was good at it, despite messing up this non-Pokemon one) but OSINTing people specifically kinda is weird, especially when it's pointing out smth they did.

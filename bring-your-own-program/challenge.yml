@@ -1,0 +1,32 @@
+name: "Bring Your Own Program"
+author: "SteakEnthusiast"
+category: Rev
+description: |-
+  Team K&K discovered a mysterious emulator for an unknown architecture. I wonder what kind of programs it can run...
+
+  `nc {{ IP }} 5000`
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: tcp
+host: null
+
+flags:
+- content: uoftctf{c4ch3_m3_1n11n3_h0w_80u7_d4h??}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/byop.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

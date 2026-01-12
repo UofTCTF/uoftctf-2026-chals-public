@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pasteboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="row">
+        <div>
+          <h1>Notes</h1>
+          <p class="subtle">Quickly share your notes.</p>
+        </div>
+        <a class="button" href="/note/new">New note</a>
+      </header>
+
+      <section class="panel">
+        <h2>Recent notes</h2>
+        {% if notes %}
+        <ul class="list">
+          {% for note in notes %}
+          <li>
+            <div>
+              <strong>{{ note.title }}</strong>
+              <span class="subtle">{{ note.id }}</span>
+            </div>
+            <div class="actions">
+              <a href="/note/{{ note.id }}">View</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="subtle">No notes yet.</p>
+        {% endif %}
+      </section>
+
+      <section class="panel">
+        <h2>Admin Bot</h2>
+        <p class="subtle">Submit a note URL for admin review.</p>
+        <a class="button ghost" href="/report">Request review</a>
+      </section>
+    </main>
+  </body>
+</html>

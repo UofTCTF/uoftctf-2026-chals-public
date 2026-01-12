@@ -1,0 +1,30 @@
+<%- include('partials/page-start') %>
+<section class="form-card">
+  <h2>Submit a link for admin review</h2>
+  <p class="muted">Only local URLs are accepted. Use the full URL from this app.</p>
+  <% if (status) { %>
+    <div class="alert success"><%= status %></div>
+  <% } %>
+  <% if (error) { %>
+    <div class="alert"><%= error %></div>
+  <% } %>
+  <form method="post" action="/report" class="form">
+    <label>
+      URL to visit
+      <input type="url" name="url" placeholder="http://localhost:3000/" required />
+    </label>
+    <% if (powChallenge) { %>
+      <p class="muted">Proof of work required.</p>
+      <p class="muted">
+        Solve with: <code>curl -sSfL https://pwn.red/pow | sh -s <%= powChallenge %></code>
+      </p>
+      <label>
+        PoW solution
+        <input type="text" name="pow_solution" placeholder="s.XXXX" required />
+      </label>
+      <input type="hidden" name="pow_challenge" value="<%= powChallenge %>" />
+    <% } %>
+    <button type="submit" class="button primary">Send to admin bot</button>
+  </form>
+</section>
+<%- include('partials/page-end') %>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>View Note</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="row">
+        <div>
+          <h1>Note</h1>
+          <p class="meta">Note: {{ note.title }}</p>
+        </div>
+        <a class="button ghost" href="/">Back</a>
+      </header>
+      <div id="injected">{{ msg|safe }}</div>
+      <template id="rawMsg">{{ msg|e }}</template>
+      <div id="card" data-mode="safe"></div>
+      <script id="errorReporterScript"></script>
+    </main>
+    <script nonce="{{ nonce }}" src="/static/dompurify.min.js"></script>
+    <script nonce="{{ nonce }}" src="/static/app.js"></script>
+  </body>
+</html>

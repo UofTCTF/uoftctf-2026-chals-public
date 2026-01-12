@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Under Construction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <h1 class="title">Under construction</h1>
+          <p class="subtitle">Welcome, <span class="mono">%s</span></p>
+        </header>
+
+        <div class="construction">
+          <div class="bar"></div>
+          <p class="body">This area is still being built. Check back soon.</p>
+        </div>
+
+        <form method="post" action="/logout">
+          <button class="button button-secondary" type="submit">Log out</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <span class="fineprint">Nothing to see here… yet.</span>
+      </footer>
+    </main>
+  </body>
+</html>

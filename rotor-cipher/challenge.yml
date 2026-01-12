@@ -1,0 +1,40 @@
+name: "Rotor Cipher"
+author: "nullptr"
+category: Crypto
+description: |
+  We captured a rotor cipher, but they destroyed the rotors before we got to it.
+  Can you recover the rotor wiring?
+
+  Author: nullptr
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+
+protocol: http
+
+host: null
+
+flags:
+  - {
+      type: "static",
+      content: "uoftctf{MTFXEOVHCRJYUQGBSLPKANIDZW_EWJPHLXIGCNAZOMDRKFUYSVQTB_AGLVFZDCOSYHNTBKPQJWRIUEXM_AM_BQ_CP_DO_EW_FZ_HU_IV_KY_LX_NR_ST}",
+      data: "case_sensitive",
+    }
+
+topics:
+  - Crypto
+
+files:
+  - dist/rotor_cipher_dist.zip
+
+state: visible
+
+requirements:
+    - "Sanity Check"
+
+version: "0.1"

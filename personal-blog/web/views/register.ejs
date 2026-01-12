@@ -1,0 +1,20 @@
+<%- include('partials/page-start') %>
+<section class="form-card">
+  <h2>Create your blog</h2>
+  <p class="muted">One account, one private blog. Keep it lightweight.</p>
+  <% if (error) { %>
+    <div class="alert"><%= error %></div>
+  <% } %>
+  <form method="post" action="/register" class="form">
+    <label>
+      Username
+      <input type="text" name="username" autocomplete="username" required />
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" autocomplete="new-password" required />
+    </label>
+    <button type="submit" class="button primary">Register</button>
+  </form>
+</section>
+<%- include('partials/page-end') %>

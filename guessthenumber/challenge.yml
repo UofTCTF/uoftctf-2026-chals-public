@@ -1,0 +1,32 @@
+name: "Guess The Number"
+author: "White"
+category: Misc
+description: |-
+  Guess my super secret number
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{h0w_did_y0u_gu3ss_7h3_numb3r}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/guess.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

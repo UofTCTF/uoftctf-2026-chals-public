@@ -1,0 +1,29 @@
+name: "Symbol of Hope"
+author: "SteakEnthusiast"
+category: Rev
+description: |-
+  Like a beacon in the dark, Go Go Squid! stands as a symbol of hope to those who seek to be healed.
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+flags:
+- content: uoftctf{5ymb0l1c_3x3cu710n_15_v3ry_u53ful}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/checker
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

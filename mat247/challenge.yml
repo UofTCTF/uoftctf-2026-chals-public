@@ -1,0 +1,29 @@
+name: "MAT247"
+author: "Toadytop"
+category: Crypto
+description: |-
+  If V admits a T-cyclic vector, and ST=TS, show that S = p(T) for some polynomial T.
+
+  Author: Toadytop
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+
+flags:
+- content: uoftctf{jus7_4_s1mple_tr4nslation_t0_GF(p^12)}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/chall.py
+- dist/output.txt
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

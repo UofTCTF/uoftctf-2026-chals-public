@@ -1,0 +1,32 @@
+name: "Will u Accept Some Magic?"
+author: "awt"
+category: Rev
+description: |- 
+  How does Kotlin compile to wasm so well? Where did my heap go?
+  
+  Wrap the password in uoftctf{}
+
+  Author: awt
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{0QGFCBREENDFDONZRC39BDS3DMEH3E}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/program.wasm
+- dist/runner.mjs
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

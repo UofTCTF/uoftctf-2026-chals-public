@@ -1,0 +1,30 @@
+name: "File Upload"
+author: "White"
+category: Misc
+description: |
+  Upload and download files
+
+  Author: White
+value: 500
+type: kubectf
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+  template_name: fileupload
+host: null
+
+flags:
+- content: uoftctf{wri734bl3_libr4ri3s_c4n_b3_d4ng3r0us}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/fileupload.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

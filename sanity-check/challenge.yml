@@ -1,0 +1,25 @@
+name: "Sanity Check"
+author: ""
+category: Misc
+description: |-
+  In this competition, you solve challenges to find hidden flags, which are secret strings that prove you completed the challenge. All flags have the format `uoftctf{...}`. 
+  
+  For this challenge, the flag is `uoftctf{Welcome_to_UofTCTF_2026!!}`
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{Welcome_to_UofTCTF_2026!!}
+  type: static
+  data: case_sensitive
+
+version: '0.1'

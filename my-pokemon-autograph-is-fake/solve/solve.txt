@@ -1,0 +1,17 @@
+Step 1: Look up various Yahoo Japan Auction archival platforms, as it's deleted. Find AucFan.
+
+Step 2: Edit the AucFan link for a listing, inserting the listing ID of the auction you want. The auction will pop up. 
+
+Step 3: Search the unique seller ID on DuckDuckGo with some dorking, to find other listings by this seller on AucFan. These listings will not have been deleted, thus you can access them through the Yahoo Japan Auctions site and get the seller's link and descriptions of the other fake autographs they've been selling.
+
+Don't use quotes as DuckDuckGo is sensitive. A search on Google also can work. https://duckduckgo.com/?origin=funnel_home_searchresults&t=h_&q=Zk-JgYlXzQHCiZnl+site%3Aaucfan.com&ia=web
+
+Make sure the price is for the later listing, as the first listing got shilled and relisted. 
+
+(Actually some background lore, I bid on a Vaporeon of that seller for like 150k yen. However, I was preparing to pay, but got busy, and the payment window expired. Thus, I asked the seller to relist, which they did, but I was sniped by another autograph collector, PokemonSteven/buckna. I asked the seller if they had any more, and they produced a few extra copies, I think a Leafeon and a Jolteon, as well as some autographs by people like Arita. However, these autographs looked a little suspicious, especially the Arita ones, which looked very sloppy, and after going around with various collectors, we decided all were fake. I tried to warn PokemonSteven about this, but he ignored me and ended up buying two more fakes from this seller and blocked me on both Discord and eBay :( Before this, the only interaction we had was him praising my Lillie lottery playmat I got in a trade. I later saw him post them on eBay, but it seems like more people told him it was fake and he ended up taking them down. Now 2 years later, the seller is still chilling on Mercari dumping tons of fakes, and PSA ended up authenticating one of them, as you will see in this challenge.)
+
+Step 4: Dork for similar fakes (same artist, similar style, card, etc) on Mercari Japan (actually Google is easier, just copy paste the listing details from the descriptions you got in the previous steps and stuff on Mercari will pop up). You will find the seller easily. 
+
+Step 5: Reverse search the fake that you found on Mercari Japan along with the card from step 3. You are supposed to use the card from step 3, but Google Images is stupid and actually finds it easier with the wrong image for some reason, though if you add fake graded or fake autograph to the image search either will work. You should find the graded card posted on an efour thread. Lookup the serial number with PSA, and go back a few serial numbers until you hit the first graded card to find the artist.
+
+Step 6: Look up Pokemon events happening on that date. Battle Festival 2017 will be the result, find the artist on the Pokemon official website that describes that event, and search them to get username.

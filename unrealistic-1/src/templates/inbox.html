@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block head %}
+  <script nonce="{{ g.csp_nonce }}" src="/static/purify.js"></script>
+  <script nonce="{{ g.csp_nonce }}">
+    async function api(path, opts = {}) {
+      const headers = Object.assign({}, opts.headers || {}, {"X-Server-Function": "read"});
+      const res = await fetch(path, Object.assign({}, opts, {headers}));
+      if (!res.ok) throw new Error("api failed");
+      return res.json();
+    }
+
+    async function loadMessages() {
+      const list = document.getElementById('message-list');
+      list.textContent = '';
+      const data = await api('/api/messages');
+      for (const msg of data.messages) {
+        const btn = document.createElement('button');
+        btn.textContent = msg.id;
+        btn.dataset.id = msg.id;
+        btn.onclick = () => openMessage(msg.id);
+        const div = document.createElement('div');
+        div.appendChild(btn);
+        list.appendChild(div);
+      }
+
+      return data.messages || [];
+    }
+
+    async function openMessage(id) {
+      const view = document.getElementById('message-view');
+      view.textContent = 'Loading...';
+      const data = await api('/api/messages/' + encodeURIComponent(id));
+      // Sanitize before rendering
+      const clean = window.DOMPurify.sanitize(data.body, {RETURN_TRUSTED_TYPE: false});
+      view.innerHTML = clean;
+
+      const del = document.getElementById('delete');
+      del.onclick = async () => {
+        const res = await fetch('/api/messages/' + encodeURIComponent(id), {
+          method: 'GET',
+          headers: {"X-Server-Function": "delete"}
+        });
+        if (res.ok) {
+          view.textContent = '(deleted)';
+          await loadMessages();
+        }
+      };
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadMessages()
+        .then((msgs) => {
+          if (msgs.length > 0 && msgs[0] && msgs[0].id) {
+            return openMessage(msgs[0].id);
+          }
+        })
+        .catch(() => {
+          document.getElementById('message-view').textContent = 'Failed to load messages';
+        });
+    });
+  </script>
+{% endblock %}
+
+{% block body %}
+  <h1 id="inbox-page">Inbox</h1>
+  <div id="messages">
+    <div>
+      <h3>Messages</h3>
+      <div id="message-list"></div>
+    </div>
+    <div>
+      <h3>View</h3>
+      <div id="message-view">Select a message</div>
+      <div class="row"><button id="delete">Delete</button></div>
+    </div>
+  </div>
+{% endblock %}

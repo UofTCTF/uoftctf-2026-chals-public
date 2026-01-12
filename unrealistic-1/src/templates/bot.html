@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Admin Bot</h1>
+  <p>Submit a URL. The bot will login as admin, visit <code>/flag</code>, then visit your URL.</p>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  {% if ok %}<p class="ok">Bot ran.</p>{% endif %}
+  <form method="post">
+    <div class="row"><input style="width: 520px" name="url" placeholder="http://127.0.0.1:5000/..." /></div>
+    <button type="submit">Run bot</button>
+  </form>
+{% endblock %}

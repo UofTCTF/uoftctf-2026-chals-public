@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Welcome</h1>
+  {% if user %}
+    <p>You are logged in as <b>{{ user['username'] }}</b>.</p>
+  {% else %}
+    <p>Register or login to use inbox messaging.</p>
+  {% endif %}
+{% endblock %}

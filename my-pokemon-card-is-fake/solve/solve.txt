@@ -1,0 +1,13 @@
+Quick solve path: 
+
+1. Look up Pokemon prototypes fake or some combination, you will get this thread as the top result (and a shit ton of articles about it) https://www.elitefourum.com/t/many-of-the-pokemon-playtest-cards-were-likely-printed-in-2024/
+
+2. Read the reports and look in the thread on how my friend decoded it
+
+3. Convert the image to CMYK in a photo editor (Krita if no money, Photoshop if money or sail the seas)
+
+4. Isolate the yellow channel, fudge with the contrast to see the dots
+
+5. Either read the paper on how to decode by hand (fun way) or decode it semi-manually using a tool from the thread (lame way)
+
+6. I could have added a lot more OSINT to this but figured against it as it's mostly a forensics challenge

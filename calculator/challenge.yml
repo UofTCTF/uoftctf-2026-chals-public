@@ -1,0 +1,32 @@
+name: "Calculator"
+author: "White"
+category: Pwn
+description: |-
+  Look at this very simple calculator I implemented in c++.
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{k33p_7r4ck_0f_y0ur_r3f3r3nc3s_pls}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/calc.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

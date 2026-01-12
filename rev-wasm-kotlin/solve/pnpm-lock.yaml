@@ -1,0 +1,23 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      binaryen:
+        specifier: ^125.0.0
+        version: 125.0.0
+
+packages:
+
+  binaryen@125.0.0:
+    resolution: {integrity: sha512-X7CUM9ZnwL/Ow++JH5AJKiemc82J7JyeryuPvXQdXBLcL/rqrC5KMUB1mHiORSolietH9sotvaOZlr6HSwPAlw==}
+    hasBin: true
+
+snapshots:
+
+  binaryen@125.0.0: {}

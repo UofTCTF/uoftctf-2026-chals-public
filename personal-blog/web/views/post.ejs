@@ -1,0 +1,20 @@
+<%- include('partials/page-start') %>
+<section class="split">
+  <div>
+    <p class="eyebrow">Private</p>
+    <h2>Post <%= post.id %></h2>
+    <p class="muted">Only you can see this entry.</p>
+    <div class="cta-row">
+      <a class="button ghost" href="/dashboard">Back to posts</a>
+      <a class="button primary" href="/edit/<%= post.id %>">Edit</a>
+    </div>
+  </div>
+  <div class="card content-card">
+    <% if (content && content.trim()) { %>
+      <div class="rich-content"><%- content %></div>
+    <% } else { %>
+      <p class="muted">This post is empty.</p>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/page-end') %>

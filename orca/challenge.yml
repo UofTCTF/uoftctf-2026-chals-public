@@ -1,0 +1,33 @@
+name: "Orca"
+author: "SteakEnthusiast"
+category: Crypto
+description: |-
+  Orcas eat squids :(
+
+  `nc {{ IP }} 5000`
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: tcp
+host: null
+
+
+flags:
+- content: uoftctf{l37_17_b3_kn0wn_th4t_th3_0r4c13_h45_5p0k3N_ac9ae43a889d2461fa7039201b6a1a75}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/orca.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

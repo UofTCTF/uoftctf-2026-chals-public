@@ -1,0 +1,22 @@
+diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
+index 24ae8f33e5d7..e5641845ecc0 100644
+--- a/kernel/bpf/verifier.c
++++ b/kernel/bpf/verifier.c
+@@ -13030,7 +13030,7 @@ static int retrieve_ptr_limit(const struct bpf_reg_state *ptr_reg,
+ static bool can_skip_alu_sanitation(const struct bpf_verifier_env *env,
+ 				    const struct bpf_insn *insn)
+ {
+-	return env->bypass_spec_v1 || BPF_SRC(insn->code) == BPF_K;
++	return true;
+ }
+ 
+ static int update_alu_sanitation_state(struct bpf_insn_aux_data *aux,
+@@ -14108,7 +14108,7 @@ static bool is_safe_to_compute_dst_reg_range(struct bpf_insn *insn,
+ 	case BPF_LSH:
+ 	case BPF_RSH:
+ 	case BPF_ARSH:
+-		return (src_is_const && src_reg->umax_value < insn_bitness);
++		return (src_reg->umax_value < insn_bitness);
+ 	default:
+ 		return false;
+ 	}

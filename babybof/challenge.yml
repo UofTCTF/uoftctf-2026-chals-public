@@ -1,0 +1,32 @@
+name: "Baby bof"
+author: "White"
+category: Pwn
+description: |-
+  People said gets is not safe, but I think I figured out how to make it safe.
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{i7s_n0_surpris3_7h47_s7rl3n_s70ps_47_null}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/babybof.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

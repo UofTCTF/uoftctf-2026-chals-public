@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K&K Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <h1 class="title">K&K Login Portal</h1>
+          <p class="subtitle">Login to continue</p>
+        </header>
+
+        {% if error %}
+          <div class="alert" role="alert">{{ error }}</div>
+        {% endif %}
+
+        <form class="form" method="post" action="/login" autocomplete="off">
+          <label class="field">
+            <span class="label">Username</span>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              placeholder="admin"
+              value="{{ username|default('') }}"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span class="label">Password</span>
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="••••"
+              required
+            />
+          </label>
+
+          <button class="button" type="submit">Sign in</button>
+
+        </form>
+      </section>
+
+      <footer class="footer">
+        <span class="fineprint">K&K Login Portal</span>
+      </footer>
+    </main>
+  </body>
+</html>

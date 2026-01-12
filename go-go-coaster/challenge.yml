@@ -1,0 +1,35 @@
+name: "Go Go Coaster!"
+author: "levu12"
+category: OSINT
+description: |-
+  During an episode of Go Go Squid!, Han Shangyan was too scared to go on a roller coaster. What's the English name of this roller coaster? Also, what's its height in whole feet?
+
+  Flag format: uoftctf{Coaster_Name_HEIGHT}
+
+  Example: uoftctf{Yukon_Striker_999}
+  
+  Notes:
+  
+  1. Flag is case-insenstive, just remember to replace spaces with underscores and no decimal points
+
+  Author: levu12
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{Diving_Coaster_213}
+  type: static
+  data: case_insensitive
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

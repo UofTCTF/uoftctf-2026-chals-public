@@ -1,0 +1,32 @@
+name: "AES AEAD"
+author: "White & nullptr"
+category: Pwn
+description: |-
+  We tried rolling our own crypto. What could possibly go wrong?
+
+  `nc {{ IP }} 5000`
+
+  Author: White & nullptr
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{i7_7urns_0u7_4_l07_c4n_g0_wr0ng}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/aes-aead.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

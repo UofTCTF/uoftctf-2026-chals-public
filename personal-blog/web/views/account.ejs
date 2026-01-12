@@ -1,0 +1,26 @@
+<%- include('partials/page-start') %>
+<section class="account-grid">
+  <div class="card">
+    <p class="eyebrow">Private</p>
+    <h2>Generate a link</h2>
+    <p class="muted">Only you should use these.</p>
+    <form method="post" action="/magic/generate">
+      <button type="submit" class="button primary">Generate link</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Your links</h3>
+    <% if (links.length === 0) { %>
+      <p class="muted">No links yet. Generate one to get started.</p>
+    <% } else { %>
+      <ul class="link-list">
+        <% links.forEach(function(token) { %>
+          <li>
+            <a href="/magic/<%= token %>">/magic/<%= token %></a>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/page-end') %>

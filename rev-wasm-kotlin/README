@@ -1,0 +1,24 @@
+> Based off of https://github.com/Kotlin/kotlin-wasm-wasi-template
+
+TLDR password checker using exceptions, gc, reference types, and other newer wasm features (that generaly decompilers dont support)
+
+Compile :
+```
+./compile.sh
+```
+Doesn't output immediately, so it might say "executable not found" thats fine.
+
+Check runtime:
+```
+./check-logic.sh
+```
+
+Minimize:
+```
+./minimize.sh
+```
+
+Test & running
+```
+node dist/run.mjs
+```

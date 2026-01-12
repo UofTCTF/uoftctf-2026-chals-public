@@ -1,0 +1,31 @@
+<%- include('partials/page-start') %>
+<section class="split">
+  <div>
+    <p class="eyebrow">Private</p>
+    <h2>Your posts</h2>
+    <p class="muted">Only you can see what you write here.</p>
+    <a class="button primary" href="/edit">New post</a>
+  </div>
+  <div class="card content-card">
+    <% if (posts.length > 0) { %>
+      <div class="post-list">
+        <% posts.forEach(function(post) { %>
+          <article class="post-item">
+            <div class="post-actions">
+              <a class="button ghost" href="/post/<%= post.id %>">View</a>
+              <a class="button primary" href="/edit/<%= post.id %>">Edit</a>
+            </div>
+            <% if (post.preview && post.preview.trim()) { %>
+              <div class="rich-content"><%- post.preview %></div>
+            <% } else { %>
+              <p class="muted">Empty post. Add your thoughts.</p>
+            <% } %>
+          </article>
+        <% }); %>
+      </div>
+    <% } else { %>
+      <p class="muted">No posts yet. Create your first private entry.</p>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/page-end') %>

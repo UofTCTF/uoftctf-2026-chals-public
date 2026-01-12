@@ -1,0 +1,34 @@
+name: "No Quotes"
+author: "SteakEnthusiast"
+category: Web
+description: |
+  Unless it's from "Go Go Squid!", no quotes are allowed here! Let this wholesome quote heal your soul:
+
+  Ai Qing: "If you didn't know about robot combat back then, what would you be doing?"
+  
+  Wu Bai: "There's no if. As long as you're here, I'll be here."
+
+  Author: SteakEnthusiast
+value: 500
+type: kubectf
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+  template_name: no-quotes
+host: null
+
+flags:
+- content: uoftctf{w0w_y0u_5UcC355FU1Ly_Esc4p3d_7h3_57R1nG!}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/no-quotes.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

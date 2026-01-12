@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Send an anonymous note</h1>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <form method="post">
+    <div class="row"><input name="to" placeholder="recipient username" /></div>
+    <div class="row"><textarea name="body" placeholder="message"></textarea></div>
+    <button type="submit">Send</button>
+  </form>
+  <p>Notes are anonymous: only message contents are shown in inbox.</p>
+{% endblock %}

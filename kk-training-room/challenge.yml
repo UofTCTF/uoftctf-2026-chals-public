@@ -1,0 +1,33 @@
+name: "K&K Training Room"
+author: "Ibrahim"
+category: Misc
+description: |-
+  Welcome to the K&K Training Room. Before every match, players must check in through the bot.
+  
+  A successful check in grants the K&K role, opening access to team channels and match coordination.
+
+  https://discord.gg/3u6V8uAGm7
+
+  Author: Ibrahim
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+flags:
+- content: uoftctf{tr41n_h4rd_w1n_345y_a625e2acd5ed}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/kk-training-room.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

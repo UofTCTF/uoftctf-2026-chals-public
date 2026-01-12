@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Register</h1>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <form method="post">
+    <div class="row"><input name="username" placeholder="username" /></div>
+    <div class="row"><input name="password" type="password" placeholder="password" /></div>
+    <button type="submit">Create account</button>
+  </form>
+{% endblock %}

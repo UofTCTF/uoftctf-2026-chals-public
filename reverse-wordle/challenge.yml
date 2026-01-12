@@ -1,0 +1,32 @@
+name: "Reverse Wordle"
+author: "janky"
+category: Misc
+description: |
+  My friend said they always use the same starting word, can you help me find out what it is?
+
+  Submit the sha256 hash of the ALL CAPS word wrapped in the flag format uoftctf{...}
+
+  Author: janky
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{64b28ded00856c89688f8376f58af02dc941535cbb0b94ad758d2a77b2468646}
+  type: static
+  data: case_sensitive
+
+files:
+  - dist/chall.txt
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

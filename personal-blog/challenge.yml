@@ -1,0 +1,32 @@
+name: "Personal Blog"
+author: "janky"
+category: Web
+description: |-
+  For your eyes only?
+
+  Visit the website [here](http://{{ IP }}:5000).
+
+  Author: janky
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{533M5_l1k3_17_W4snt_50_p3r50n41...}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/personal-blog.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

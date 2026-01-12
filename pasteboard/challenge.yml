@@ -1,0 +1,40 @@
+name: "Pasteboard"
+author: "SteakEnthusiast"
+category: Web
+description: |
+  For Team K&K, dating is forbidden. So Mi Shaofei and Sun Yaya hide their relationship the only way they can: by slipping messages into a notes sharing app.
+
+  Author: SteakEnthusiast
+value: 500
+type: kubectf
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+  template_name: pasteboard
+
+protocol: http
+
+host: null
+
+flags:
+  - {
+      type: "static",
+      content: "uoftctf{n0_c00k135_n0_pr0bl3m_1m40_122c3466655003ca64d689e3ee0e786d}",
+      data: "case_sensitive",
+    }
+
+topics:
+  - Web
+
+files:
+  - dist/pasteboard.zip
+
+state: visible
+
+requirements:
+    - "Sanity Check"
+
+version: "0.1"

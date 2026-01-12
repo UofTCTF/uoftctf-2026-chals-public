@@ -1,0 +1,34 @@
+name: "Lottery"
+author: "SteakEnthusiast"
+category: Misc
+description: |-
+  Han Shangyan quietly gives away all his savings to protect someone he cares about, leaving himself with nothing. Now broke, his only hope is chance itself.
+
+  Can you help Han Shangyan win the lottery?
+
+  `nc {{ IP }} 5000`
+
+  Author: SteakEnthusiast, White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{you_won_the_LETtery_(hahahaha_get_it???)}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/lottery.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

@@ -1,0 +1,29 @@
+name: "Baby Exfil"
+author: "0x157"
+category: Forensics
+description: |-
+  Team K&K has identified suspicious network activity on their machine. Fearing that a competing team may be attempting to steal confidential data through underhanded means, they need your help analyzing the network logs to uncover the truth.
+
+  Author: 0x157
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+flags:
+- content: uoftctf{b4by_w1r3sh4rk_an4lys1s}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/final.pcapng
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

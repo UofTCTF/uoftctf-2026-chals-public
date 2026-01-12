@@ -1,0 +1,61 @@
+Good angle to look at the wasm is following fd_read and fd_write calls.
+
+Following fd_read you can see the input getting stored in a complex array (structure is part of kotlin compilation, can compile dummy programs to analyze it more specifically)
+
+Following fd_write can find print with args "Password: INCORRECT" and "Password: CORRECT" then from there we have a chunk of unknown in between
+
+
+Above correct password is a check for eq 30
+then before that a large block of try catch wrapped logic inside of a loop (complex control flow). at the deepest point of this code is a call to a func $132 which throws errors and then checks the equality of two things (ne).
+
+Hooking into ne and eq and logging results is the best way to deal with this.
+
+
+Using `index.js` hook into ne and check for times when a value != some other value.
+
+For an empty string you see:
+```You typed: 
+HOOK[i32.ne] result=1 with 0 != 30
+Password: INCORRECT
+```
+For any 1-char string
+```
+You typed: a
+HOOK[i32.ne] result=1 with 48 != 97
+Password: INCORRECT
+```
+```
+You typed: b
+HOOK[i32.ne] result=1 with 48 != 98
+Password: INCORRECT
+```
+Inputting 0:
+```
+You typed: 0
+HOOK[i32.ne] result=1 with 1 != 30
+Password: INCORRECT
+```
+
+Inputting '0' * 30:
+```
+You typed: 000000000000000000000000000000
+HOOK[i32.ne] result=1 with 14 != 17
+HOOK[i32.ne] result=1 with 81 != 48
+Password: INCORRECT
+```
+Leading to
+```
+You typed: 0Q0000000000000000000000000000
+..
+HOOK[i32.ne] result=1 with 71 != 48
+Password: INCORRECT
+```
+Then
+```
+You typed: 0QG000000000000000000000000000
+..
+HOOK[i32.ne] result=1 with 70 != 48
+Password: INCORRECT
+```
+
+ETC ETC until you rebuild entire password.

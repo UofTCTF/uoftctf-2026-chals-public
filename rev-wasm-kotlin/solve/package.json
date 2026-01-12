@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "pnpm@10.5.2",
+  "dependencies": {
+    "binaryen": "^125.0.0"
+  }
+}

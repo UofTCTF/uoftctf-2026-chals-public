@@ -1,0 +1,176 @@
+:root {
+  color-scheme: light;
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent-dark: #1e40af;
+  --border: #e2e8f0;
+  --shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #e2e8f0, #f8fafc 40%, #e2e8f0);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: inherit;
+}
+
+.subtle,
+.meta {
+  color: var(--muted);
+  margin: 0;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.panel > .button {
+  margin-top: 0.75rem;
+  align-self: flex-start;
+  display: inline-flex;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.list li {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 220px;
+}
+
+.button,
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.button:hover,
+button:hover {
+  background: var(--accent-dark);
+}
+
+.button.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.code {
+  background: #0b1120;
+  color: #e2e8f0;
+  padding: 1.2rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@media (max-width: 720px) {
+  main {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .button,
+  button {
+    width: 100%;
+  }
+}

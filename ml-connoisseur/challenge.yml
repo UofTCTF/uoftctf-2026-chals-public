@@ -1,0 +1,31 @@
+name: "ML Connoisseur"
+author: "SteakEnthusiast"
+category: Rev
+description: |-
+  Tong Nian is a talented machine learning student. She claims to have built a classifier, but never revealed what it is supposed to recognize. The model behaves oddly, and its purpose is unclear. Can you figure out what it's really classifying?
+
+  Download: https://uoftctf-2026-downloads.uoftctf.org/ml-connoisseur.zip
+
+  Example usage: `python chal.py examples/0.png`
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{m0d3l_1nv3R510N}
+  type: static
+  data: case_sensitive
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

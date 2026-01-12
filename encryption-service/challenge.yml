@@ -1,0 +1,32 @@
+name: "Encryption Service"
+author: "White"
+category: Misc
+description: |-
+  We made an encryption service. We forgot to make the decryption though. As compensation we are giving free encrypted flags
+
+  `nc {{ IP }} 5000`
+
+  Author: White
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+
+flags:
+- content: uoftctf{x4rgs_d03sn7_run_in_0n3_pr0c3ss}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/encryption-service.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

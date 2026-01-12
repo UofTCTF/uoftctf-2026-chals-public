@@ -1,0 +1,32 @@
+name: "MAT347"
+author: "Toadytop"
+category: Crypto
+description: |-
+  Groups, Rings, and Fields. But only groups (and modules!).
+
+  `nc {{ IP }} 5000`
+
+  Author: Toadytop
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: tcp
+host: null
+
+flags:
+- content: uoftctf{wagners_kinda_bad_for_this..._lattices_4tw!!}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/chall.py
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

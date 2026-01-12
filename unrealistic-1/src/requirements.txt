@@ -1,0 +1,5 @@
+Flask==3.0.3
+PyJWT==2.10.1
+gunicorn==22.0.0
+selenium==4.27.1
+Werkzeug==3.0.6

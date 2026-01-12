@@ -1,0 +1,32 @@
+name: "Vibe Code"
+author: "nullptr"
+category: Misc
+description: |-
+  AI is so ubiquitous in CTF, so I am forcing you to use it to solve this easy C jail.
+
+  `nc {{ IP }} 5000`
+
+  Author: nullptr
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: tcp
+host: null
+
+flags:
+- content: uoftctf{transformers_only_became_cool_with_gpt3.5_so_grats_on_making_it_work}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/vibe-code.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

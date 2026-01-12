@@ -1,0 +1,14 @@
+{
+  "name": "personal-blog-bot",
+  "version": "1.0.0",
+  "description": "Admin bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer-core": "^22.7.0"
+  }
+}

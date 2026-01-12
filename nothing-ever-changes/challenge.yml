@@ -1,0 +1,31 @@
+name: "Nothing Ever Changes"
+author: "SteakEnthusiast"
+category: Misc
+description: |-
+  While conducting her research on artificial intelligence, Tong Nian claims to have found a way to create adversarial examples without changing anything at all. Her colleagues are skeptical. Can you help her hash out the details of her approach and verify its validity?
+
+  Try it out [here](http://{{ IP }}:5000/health)!
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+host: null
+
+flags:
+- content: uoftctf{d1d_y0u_kn0w_4_UofT_pr0f3550r_m4d3_th3_JSMA_p4p3r(https://doi.org/10.48550/arXiv.1511.07528)???}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/nothing-ever-changes.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

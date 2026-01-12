@@ -1,0 +1,30 @@
+name: "UofT LFSR Labyrinth"
+author: "xtra"
+category: Crypto
+description: |-
+  A quirky 48-bit UofT stream taps through a WG-flavoured filter, leaving 80 bits of trace and a sealed flag. The blueprint is public; the hidden state is the dance you need to unravel.
+  
+  Author: xtra
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{l33ky_lfsr_w17h_n0n_l1n34r_fl4v0rrrr}
+  type: static
+  data: case_sensitive
+
+files:
+- dist/LFSR.zip
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'

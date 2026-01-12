@@ -1,0 +1,20 @@
+<%- include('partials/page-start') %>
+<section class="form-card">
+  <h2>Welcome back</h2>
+  <p class="muted">Your blog is waiting.</p>
+  <% if (error) { %>
+    <div class="alert"><%= error %></div>
+  <% } %>
+  <form method="post" action="/login" class="form">
+    <label>
+      Username
+      <input type="text" name="username" autocomplete="username" required />
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" autocomplete="current-password" required />
+    </label>
+    <button type="submit" class="button primary">Login</button>
+  </form>
+</section>
+<%- include('partials/page-end') %>

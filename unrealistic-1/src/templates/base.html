@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blah Blah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}" />
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/motd">MOTD</a>
+      <a href="/inbox">Inbox</a>
+      <a href="/compose">Compose</a>
+      <a href="/bot">Bot</a>
+      {% if authenticated %}
+        <a href="/logout">Logout</a>
+      {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      {% endif %}
+    </nav>
+    <hr />
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      {% if authenticated and current_username %}
+        <p>You are browsing as user: "<code>{{ current_username }}</code>"</p>
+      {% else %}
+        <p>You are browsing as user: "<code>Guest</code>"</p>
+      {% endif %}
+    </footer>
+  </body>
+  
+</html>

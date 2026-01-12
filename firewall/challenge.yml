@@ -1,0 +1,38 @@
+name: "Firewall"
+author: "nullptr"
+category: Web
+description: |
+  Free flag at /flag.html
+
+  `curl http://{{ IP }}:5000`
+
+  Author: nullptr
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+
+protocol: tcp
+
+host: null
+
+flags:
+  - {
+      type: "static",
+      content: "uoftctf{f1rew4l1_Is_nOT_par7icu11rLy_R0bust_I_bl4m3_3bpf}",
+      data: "case_sensitive",
+    }
+
+files:
+  - dist/firewall.zip
+
+state: visible
+
+requirements:
+    - "Sanity Check"
+
+version: "0.1"

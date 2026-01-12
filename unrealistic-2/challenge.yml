@@ -1,0 +1,41 @@
+name: "Unrealistic Client-Side Challenge - Flag 2"
+author: "SteakEnthusiast"
+category: Web
+description: |
+  Han Shangyan was tired of Team K&K getting skill-diffed every time they were faced with client-side web challenges. After some self-reflection, he finally accepted that training his squad solely with aim trainers _might_ not be the best approach. Instead, he decided to make a _totally realistic_ CTF challenge for his team to practice on.
+
+  Submit flag 2 here. Both challenges use the same attachment.
+
+  Note: Port 5001 is not exposed on the remote instance. However, the bot can still access it and this does not interfere with the intended solution.
+
+  Author: SteakEnthusiast
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+
+protocol: http
+
+host: null
+
+flags:
+  - {
+      type: "static",
+      content: "uoftctf{3nc0d1n6_s0_c001}",
+      data: "case_sensitive",
+    }
+
+topics:
+  - Web
+
+
+state: visible
+
+requirements:
+    - "Sanity Check"
+
+version: "0.1"

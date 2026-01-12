@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Message of the Day</h1>
+  <p>{{ motd | safe }}</p>
+  If you don't see the "MOTD" try refreshing the page or check back later for tomorrow's update!
+  {% if flag %}
+    <p>{{ flag }}</p>
+  {% else %}
+    <p>Enjoy this picture of a cute squid:</p>
+    <img
+      src="https://cpop-universe.com/cdn/shop/products/O1CN01DIL6E31lsnMydaUQJ__0-item_pic_2048x.jpg?v=1631548755"
+      alt="squid"
+      loading="lazy"
+    />
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Paste</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>New note</h1>
+      <p class="subtle">Save a note to share it later.</p>
+      <form method="post" class="panel">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" placeholder="Example Note Title" />
+
+        <label for="body">Body</label>
+        <textarea id="body" name="body" rows="10" placeholder="Write your note here"></textarea>
+
+        <div class="actions">
+          <a class="button ghost" href="/">Cancel</a>
+          <button class="button" type="submit">Save note</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

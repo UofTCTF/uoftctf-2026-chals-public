@@ -1,0 +1,60 @@
+name: "My Pokemon Autograph is Fake!"
+author: "levu12"
+category: OSINT
+description: |-
+  Han Shangyan wanted to buy an autographed Pokemon card for Tong Nian. Unfortunately, he
+  found out that it was fake! He wants to find out more about this forger, but they have
+  deleted the auction! Can you help him put a stop to this 2-year-long scheme?
+
+  https://auctions.yahoo.co.jp/jp/auction/t1101312767
+ 
+  What you will need to find:
+
+  1. The link to the forger's Yahoo Japan Auctions profile
+
+  2. The link to the forger's Mercari profile, where they still sell similar forgeries to this
+  day
+
+  3. One of the seller's forgeries of the same Pokemon artist as the forgery in the link given was
+  graded and authenticated with PSA (most trustworthy grading service btw)! Find how much yen it sold
+  for originally.
+
+  4. The first and last name of the Pokemon artist of the first autograph in the PSA submission that
+  the forger submitted that contains the card from (3).
+
+  5. Finally, the forger copied the card from (3) from a real signing event to make it look
+  real. What Pokemon artist was first to autograph in that event? Get their twitter username.
+
+  The flag format will be uoftctf{URL1_URL2_AMT_FIRSTNAME_LASTNAME_USERNAME}
+
+  Copy the full URLs.
+
+  Example: uoftctf{https://auctions.yahoo.co.jp/seller/fhrh2HFHdqw229nrr34r89jdg_https://jp.mercari.com/user/profile/999999_99999_John_Doe_example}
+  
+  Notes: 
+  
+  1. OSINTing the author will not help you, though you are free to do so.
+  
+  2. Flag is case-insensitive.
+
+  Author: levu12
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 100
+  minimum: 100
+  function: aachen
+protocol: null
+host: null
+
+flags:
+- content: uoftctf{https://auctions.yahoo.co.jp/seller/BQJGpRLzsmyKst5ogprtSz3JDvqcf_https://jp.mercari.com/user/profile/899249687_74000_Midori_Harada_megtany}
+  type: static
+  data: case_insensitive
+
+requirements:
+    - "Sanity Check"
+
+version: '0.1'
